@@ -1,0 +1,52 @@
+<div class="wrapper">
+	<div class="content">
+    	<div class="header-row">
+        	<div class="header-cols-2">
+    			<div class="logo">
+    				<%= image_tag ("logo.jpg") %>
+    			</div>
+             </div>
+             
+             <div class="header-cols-2">
+    			
+             </div>
+        </div>
+
+        <div class="row">
+        	<div class="nav">
+        		<ul>
+        			<li><%= link_to 'HOME', public_home_path%></li>
+        			<li><%= link_to 'ABOUT US', public_about_path %></li>
+        			<li><%= link_to 'PRODUCTS', public_products_path %></li>
+        			<li><%= link_to 'INSTRUCTIONS', public_instructions_path %></li>
+        			<li><%= link_to 'CONTACT US', public_contact_path %></li>
+        		</ul>
+        	</div>
+    	</div>
+            
+            <div class="row">
+	            <div class="content-col">
+	            	<% @products.each do |product| %>
+	            	<div class="picture_box">
+						  <%= image_tag(product.product_image, :size => "260x200") %><br/>
+							<h3><%= product.description %><h3>
+						  <div class="clear"></div>
+			              <div class="extra_info">
+			              		  <span class="details">
+					              <strong>Dress Code : </strong><%= product.code %><br> 
+					              <strong>Dress Fabric :</strong> <%= product.fabric %><br>
+					              <strong>Color : </strong><%= product.color %>
+					              <strong>Color : </strong>R<%= product.price %></span>
+                          </div>
+
+                          <%= link_to 'ADD TO CART','#' %>
+      				</div>
+      				<% end %>
+						
+	            	</div>
+	            </div>
+        	</div>
+        </div>
+    </div>
+    <div class="clear"><BR><BR></div>
+</div>

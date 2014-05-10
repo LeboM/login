@@ -1,0 +1,24 @@
+<h1>Product List</h1>
+
+<table width="1200" border="0">
+	<tr>
+		<td><b>PRODUCT IMAGE</b></td>
+		<td><b>PRODUCT DESCRIPTION</td>
+		<td><b> COLOUR</b></td>
+		<td><b> FABRIC</b></td>
+		<td><b> CODE</b></td>
+		<td><b> PRICE</b></td>
+		<td><b>ACTIONS</b></td>
+	</tr>
+	<% @products.each do |product| %>
+	<tr>
+		<td><%= image_tag(product.product_image, :size => "170x200") %></td>
+		<td><%= product.description %></td>
+		<td><%= product.color %></td>
+		<td><%= product.fabric %></td>
+		<td><%= product.code %></td>
+		<td>R<%= product.price %></td>
+		<td></td>
+	</tr>
+	<% end %>
+</table>

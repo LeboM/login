@@ -1,0 +1,24 @@
+<h1>New Product</h1>
+<%= form_for @product do |p| %>
+	
+	Product Description <br>
+	<%= p.text_field :description %><br><br>
+
+	Colour <br>
+	<%= p.text_field :color %><br><br>
+
+	Product Code <br>
+	<%= p.text_field :code %><br><br>
+
+	Fabric Type <br>
+	<%= p.text_field :fabric %><br><br>
+
+	Product Image <br>
+	<%= p.text_field :product_image %><br><br>
+
+	Price <br>
+	<%= p.text_field :price %><br><br>
+
+	<%= submit_tag "Insert Product" %><br>
+
+<% end %>

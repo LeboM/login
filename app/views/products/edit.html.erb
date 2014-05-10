@@ -1,0 +1,25 @@
+<h1>Edit</h1>
+<h1>New Product</h1>
+<%= form_for(:action => 'update', :id => @product.id) %>
+	
+	Product Description <br>
+	<%= text_field(@product.description) %><br><br>
+
+	Colour <br>
+	<%= text_field(@product.color)%><br><br>
+
+	Product Code <br>
+	<%= text_field(@product.code) %><br><br>
+
+	Fabric Type <br>
+	<%= text_field(@product.fabric)%><br><br>
+
+	Product Image <br>
+	<%= text_field(@product.product_image) %><br><br>
+
+	Price <br>
+	<%= text_field(@product.price) %><br><br>
+
+	<%= submit_tag "Update" %><br>
+
+<% end %>

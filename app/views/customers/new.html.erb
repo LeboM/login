@@ -1,0 +1,33 @@
+<h1>New Customers</h1>
+
+<%= flash[:notice] %>
+
+<%= form_for @customer do |customer| %>
+	
+	Name <br>
+	<%= customer.text_field :name %><br><br>
+
+	Surname <br>
+	<%= customer.text_field :surname %><br><br>
+
+	Phone <br>
+	<%= customer.text_field :phone %><br><br>
+
+	Email Address <br>
+	<%= customer.text_field :email %><br><br>
+
+	Physical Address <br>
+	<%= customer.text_field :address %><br><br>
+
+	Postal Code <br>
+	<%= customer.text_field :postalcode %><br><br>
+
+	City <br>
+	<%= customer.text_field :city %><br><br>
+
+	Province <br>
+	<%= customer.text_field :province %><br><br>
+
+	<%= submit_tag "Register User" %><br>
+
+<% end %>

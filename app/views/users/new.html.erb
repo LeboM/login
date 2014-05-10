@@ -1,0 +1,20 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+<%= flash[:notice] %>
+
+<%= form_for @user do |user| %>
+	
+	Name <br>
+	<%= user.text_field :name %><br>
+
+	Surname <br>
+	<%= user.text_field :surname %><br>
+
+	Age <br>
+	<%= user.text_field :age %><br><br>
+
+	<%= submit_tag "Register User" %><br>
+
+<% end %>
+
+
